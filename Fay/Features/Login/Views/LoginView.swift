@@ -73,8 +73,8 @@ struct LoginView: View {
             Spacer()
 
             if viewModel.isLoggingIn {
-                ProgressView()
-                    .tint(.fayBlue)
+                PulsingLogoView()
+                    .frame(width: 32, height: 32)
                     .frame(maxWidth: .infinity)
                     .padding(.bottom, 32)
             } else {

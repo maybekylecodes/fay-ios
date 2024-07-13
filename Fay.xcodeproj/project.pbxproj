@@ -20,7 +20,7 @@
 		27B929C82C4241E300FA82D0 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929C72C4241E300FA82D0 /* View+Extensions.swift */; };
 		27B929CB2C4242D400FA82D0 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929CA2C4242D400FA82D0 /* AppointmentService.swift */; };
 		27B929CD2C42443500FA82D0 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929CC2C42443500FA82D0 /* Appointment.swift */; };
-		27B929CF2C4246C000FA82D0 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929CE2C4246C000FA82D0 /* LaunchScreenView.swift */; };
+		27B929CF2C4246C000FA82D0 /* PulsingLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929CE2C4246C000FA82D0 /* PulsingLogoView.swift */; };
 		27B929D22C4249E600FA82D0 /* AppNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D12C4249E600FA82D0 /* AppNavigationModel.swift */; };
 		27B929D42C4249F400FA82D0 /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D32C4249F400FA82D0 /* AppDestination.swift */; };
 		27B929D72C42522E00FA82D0 /* AppointmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D62C42522E00FA82D0 /* AppointmentsViewModel.swift */; };
@@ -48,7 +48,7 @@
 		27B929C72C4241E300FA82D0 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		27B929CA2C4242D400FA82D0 /* AppointmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
 		27B929CC2C42443500FA82D0 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
-		27B929CE2C4246C000FA82D0 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		27B929CE2C4246C000FA82D0 /* PulsingLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsingLogoView.swift; sourceTree = "<group>"; };
 		27B929D12C4249E600FA82D0 /* AppNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationModel.swift; sourceTree = "<group>"; };
 		27B929D32C4249F400FA82D0 /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
 		27B929D62C42522E00FA82D0 /* AppointmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewModel.swift; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				27B929BA2C4232D900FA82D0 /* SeparatorView.swift */,
-				27B929CE2C4246C000FA82D0 /* LaunchScreenView.swift */,
+				27B929CE2C4246C000FA82D0 /* PulsingLogoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 				27B929BD2C42387A00FA82D0 /* StatusSelectionView.swift in Sources */,
 				27B929C62C423FBC00FA82D0 /* MonthView.swift in Sources */,
 				27FD755A2C421FC6009F8146 /* KeychainManager.swift in Sources */,
-				27B929CF2C4246C000FA82D0 /* LaunchScreenView.swift in Sources */,
+				27B929CF2C4246C000FA82D0 /* PulsingLogoView.swift in Sources */,
 				27B929B52C422ED200FA82D0 /* LoginViewModel.swift in Sources */,
 				27B929CB2C4242D400FA82D0 /* AppointmentService.swift in Sources */,
 				27B929C42C423FA900FA82D0 /* AppointmentListItemModel.swift in Sources */,

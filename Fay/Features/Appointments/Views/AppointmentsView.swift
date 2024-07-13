@@ -53,8 +53,8 @@ struct AppointmentsView: View {
             .padding(.top, 24)
 
             if viewModel.isLoading {
-                ProgressView()
-                    .tint(.fayBlue)
+                PulsingLogoView()
+                    .frame(width: 32, height: 32)
                     .frame(maxWidth: .infinity)
                     .padding(.top, 16)
             }

@@ -16,7 +16,8 @@ struct FayApp: App {
         WindowGroup {
             switch navModel.currentScreen {
             case .launch:
-                LaunchScreenView()
+                PulsingLogoView()
+                    .frame(width: 80, height: 80)
 
             case .login:
                 LoginView()
