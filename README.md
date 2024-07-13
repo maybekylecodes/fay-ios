@@ -17,6 +17,11 @@ I added the ability to sign out which will make testing easier, and it just make
 <img src="images/home.png" width="300" alt="Home">
 <img src="images/signout.png" width="300" alt="Signout">
 
+Looks great on light & dark mode
+<br>
+<img src="images/light.png" width="300" alt="Light Mode">
+<img src="images/dark.png" width="300" alt="Dark Mode">
+
 I tried to really improve the UI as much as possible and I hope that shows even in the small details. You can see here in the original design that the bar under Upcoming is a pixel above the separator 
 <br>
 ![Original Separator](images/separator.png)
