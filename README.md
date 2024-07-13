@@ -15,7 +15,7 @@ The loading progress spinner is overused, I made a custom little progress indica
 I added the ability to sign out which will make testing easier, and it just makes sense. 
 <br>
 <img src="images/home.png" width="300" alt="Home">
-<<img src="images/signout.png" width="300" alt="Signout">
+<img src="images/signout.png" width="300" alt="Signout">
 
 I tried to really improve the UI as much as possible and I hope that shows even in the small details. You can see here in the original design that the bar under Upcoming is a pixel above the separator 
 <br>
