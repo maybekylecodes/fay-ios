@@ -20,6 +20,7 @@ struct MonthView: View {
 
             Text(day)
                 .fontWeight(.semibold)
+                .foregroundStyle(.black)
         }
         .frame(width: 56, height: 56)
         .background(

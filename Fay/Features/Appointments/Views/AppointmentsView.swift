@@ -32,7 +32,7 @@ struct AppointmentsView: View {
                     viewModel.signOutTapped()
                 } label: {
                     Image(systemName: "rectangle.portrait.and.arrow.right")
-                        .foregroundStyle(.red.opacity(0.5))
+                        .foregroundStyle(.red.opacity(0.6))
                         .frame(width: 44, height: 44)
                 }
                 .buttonStyle(.plain)
