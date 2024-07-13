@@ -10,21 +10,52 @@ import SwiftUI
 @MainActor
 class AppointmentsViewModel: ObservableObject {
 
+    // Services
+    let apptService: AppointmentService = AppointmentProvider()
+
     // Data
-    @Published var appointmentModels = [AppointmentListItemModel.getMock(),
-                                        AppointmentListItemModel.getMock()]
+    @Published var appointmentModels = [AppointmentListItemModel]()
 
     // View
     @Published var selectedStatus: StatusSelection = .upcoming
     @Published var selectedModelId: String?
+
+    init() {
+        setup()
+    }
+
+    private func setup() {
+        loadData()
+    }
+}
+
+// MARK: - Data Loading
+extension AppointmentsViewModel {
+
+    private func loadData() {
+        loadAppointments()
+    }
+
+    private func loadAppointments() {
+        Task {
+            do {
+                let response = try await apptService.getAppts()
+                appointmentModels = response.appointments.compactMap { AppointmentListItemModel(appointment: $0) }
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
 
 // MARK: - User Actions
 extension AppointmentsViewModel {
-
+    
 }
 
 struct AppointmentsView: View {
+
+    @EnvironmentObject private var navModel: AppNavigationModel // For logging out if needed
 
     @StateObject private var viewModel = AppointmentsViewModel()
 

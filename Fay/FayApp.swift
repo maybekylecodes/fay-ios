@@ -9,9 +9,23 @@ import SwiftUI
 
 @main
 struct FayApp: App {
+
+    @StateObject private var navModel = AppNavigationModel()
+
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            switch navModel.currentScreen {
+            case .launch:
+                LaunchScreenView()
+
+            case .login:
+                LoginView()
+                    .environmentObject(navModel)
+
+            case .appointments:
+                AppointmentsView()
+                    .environmentObject(navModel)
+            }
         }
     }
 }

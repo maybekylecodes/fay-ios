@@ -21,6 +21,9 @@ class LoginViewModel: ObservableObject {
     // View
     @Published var continueButtonEnabled = false
 
+    // Navigation
+    @Published var userLoggedIn = false
+
     // Combine
     private var cancellables = Set<AnyCancellable>()
 
@@ -70,6 +73,7 @@ extension LoginViewModel {
                 let userLogin = LoginUserPost(username: trimmedUsername,
                                               password: password)
                 try await authService.loginUser(user: userLogin)
+                userLoggedIn = true
             } catch {
                 print(error)
 

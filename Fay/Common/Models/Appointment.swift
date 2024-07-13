@@ -16,7 +16,7 @@ struct Appointment: Decodable {
     let start: Date
     let end: Date
     let durationInMinutes: Int
-    let recurrentType: AppointmentRecurrenceType
+    let recurrenceType: AppointmentRecurrenceType
 }
 
 extension Appointment {
@@ -30,7 +30,7 @@ extension Appointment {
             start: Date().addingTimeInterval(1000),
             end: Date().addingTimeInterval(2000),
             durationInMinutes: 10,
-            recurrentType: .weekly)
+            recurrenceType: .weekly)
     }
 }
 

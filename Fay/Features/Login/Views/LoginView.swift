@@ -14,6 +14,8 @@ struct LoginView: View {
         case password
     }
 
+    @EnvironmentObject private var navModel: AppNavigationModel
+
     @StateObject private var viewModel = LoginViewModel()
 
     @FocusState private var focusedField: FocusedField?
@@ -86,6 +88,11 @@ struct LoginView: View {
             .padding(.bottom, 32)
         }
         .padding(.horizontal, 20)
+        .onReceive(viewModel.$userLoggedIn) { loggedIn in
+            if loggedIn {
+                navModel.navigate(to: .appointments)
+            }
+        }
     }
 }
 

@@ -27,3 +27,31 @@ extension AppointmentListItemModel {
             day: "12")
     }
 }
+
+extension AppointmentListItemModel {
+    init(appointment: Appointment) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+
+        // Format time range
+        dateFormatter.dateFormat = "h:mm a"
+        let startTime = dateFormatter.string(from: appointment.start)
+        let endTime = dateFormatter.string(from: appointment.end)
+        let timeZoneAbbreviation = TimeZone.current.abbreviation() ?? ""
+
+        // Format month and day
+        dateFormatter.dateFormat = "MMM"
+        let month = dateFormatter.string(from: appointment.start).uppercased()
+        dateFormatter.dateFormat = "d"
+        let day = dateFormatter.string(from: appointment.start)
+
+        self.init(
+            id: appointment.appointmentId,
+            title: "\(appointment.appointmentType.rawValue) with Taylor Palmer, RD", // Since we don't have the actual metadata
+            timeRange: "\(startTime) - \(endTime) (\(timeZoneAbbreviation))",
+            recurrence: appointment.recurrenceType.rawValue,
+            month: month,
+            day: day
+        )
+    }
+}

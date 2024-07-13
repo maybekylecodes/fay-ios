@@ -26,6 +26,7 @@ class NetworkClient {
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
         return try decoder.decode(T.self, from: data)
     }
 
@@ -45,6 +46,7 @@ class NetworkClient {
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
         return try? decoder.decode(R.self, from: data)
     }
 
