@@ -53,7 +53,7 @@ struct AppointmentsView: View {
             .padding(.top, 24)
 
             if viewModel.isLoading {
-                PulsingLogoView()
+                SpinningLogoView()
                     .frame(width: 32, height: 32)
                     .frame(maxWidth: .infinity)
                     .padding(.top, 16)
@@ -78,7 +78,7 @@ struct AppointmentsView: View {
         }
         .onReceive(viewModel.$userSignedOut) { signedOut in
             if signedOut {
-                navModel.navigate(to: .login)
+                navModel.signedOut()
             }
         }
         .onAppear {
@@ -86,6 +86,7 @@ struct AppointmentsView: View {
             UIRefreshControl.appearance().tintColor = .clear
         }
         .toastView(model: $viewModel.toastModel)
+        .toolbar(.hidden, for: .navigationBar)
         .alert("Sign Out?",
                isPresented: $viewModel.showSignOutAlert) {
             Button("Cancel", role: .cancel) { }

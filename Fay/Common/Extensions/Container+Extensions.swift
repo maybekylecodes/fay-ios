@@ -11,7 +11,7 @@ import Factory
 extension Container {
     var authService: Factory<AuthService> {
         Factory(self) { AuthProvider() }
-            .singleton
+            .shared
     }
 
     var appointmentService: Factory<AppointmentService> {

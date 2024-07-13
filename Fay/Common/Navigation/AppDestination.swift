@@ -8,7 +8,6 @@
 import Foundation
 
 enum AppDestination: Hashable {
-    case launch
     case login
     case appointments
 }

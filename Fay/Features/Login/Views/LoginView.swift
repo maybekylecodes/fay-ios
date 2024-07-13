@@ -82,7 +82,7 @@ struct LoginView: View {
             Spacer()
 
             if viewModel.isLoggingIn {
-                PulsingLogoView()
+                SpinningLogoView()
                     .frame(width: 32, height: 32)
                     .frame(maxWidth: .infinity)
                     .padding(.bottom, 32)
@@ -112,6 +112,7 @@ struct LoginView: View {
             }
         }
         .toastView(model: $viewModel.toastModel)
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 

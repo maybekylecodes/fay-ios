@@ -8,7 +8,7 @@ I copied (stole) this idea from Fay's website. On the login screen you can see a
 <br>
 <img src="images/typing.png" width="300" alt="Typing Animation">
 
-The loading progress spinner is overused, I made a custom little progress indicator using Fay's logo that grows and shrinks to show something is happening 
+The loading progress spinner is overused, I made a custom little progress indicator using Fay's logo that spins to show something is loading 
 <br>
 <img src="images/loading.png" width="300" alt="Loading Animation">
 

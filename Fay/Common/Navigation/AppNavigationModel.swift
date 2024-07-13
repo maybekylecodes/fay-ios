@@ -9,7 +9,7 @@ import Foundation
 
 class AppNavigationModel: ObservableObject {
 
-    @Published var currentScreen: AppDestination = .launch
+    @Published var destinations = [AppDestination]()
 
     init() {
         setup()
@@ -20,7 +20,11 @@ class AppNavigationModel: ObservableObject {
     }
 
     private func setupCurrentScreen() {
-        currentScreen = isUserLoggedIn() ? .appointments : .login
+        if isUserLoggedIn() {
+            navigate(to: .appointments)
+        } else {
+            navigate(to: .login)
+        }
     }
 
     private func isUserLoggedIn() -> Bool {
@@ -33,10 +37,14 @@ class AppNavigationModel: ObservableObject {
     }
 
     func navigate(to destination: AppDestination) {
-        guard currentScreen != destination else {
+        guard destination != destinations.last else {
             return
         }
 
-        currentScreen = destination
+        destinations = [destination]
+    }
+
+    func signedOut() {
+        destinations = [.login]
     }
 }

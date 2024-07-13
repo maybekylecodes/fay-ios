@@ -14,18 +14,21 @@ struct FayApp: App {
 
     var body: some Scene {
         WindowGroup {
-            switch navModel.currentScreen {
-            case .launch:
-                PulsingLogoView()
+            NavigationStack(path: $navModel.destinations) {
+                SpinningLogoView()
                     .frame(width: 80, height: 80)
-
-            case .login:
-                LoginView()
                     .environmentObject(navModel)
-
-            case .appointments:
-                AppointmentsView()
-                    .environmentObject(navModel)
+                    .navigationDestination(for: AppDestination.self) { destination in
+                        switch destination {
+                        case .login:
+                            LoginView()
+                                .environmentObject(navModel)
+                            
+                        case .appointments:
+                            AppointmentsView()
+                                .environmentObject(navModel)
+                        }
+                    }
             }
         }
     }
