@@ -17,6 +17,7 @@ final class LoginViewModelTests: XCTestCase {
     private var cancelables = Set<AnyCancellable>()
 
     override func setUpWithError() throws {
+        // Our mock auth provider always fails login
         Container.shared.authService.register { MockAuthProvider() }
         viewModel = LoginViewModel()
     }

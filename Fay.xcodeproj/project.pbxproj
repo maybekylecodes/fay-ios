@@ -33,6 +33,7 @@
 		27B929EA2C42E85B00FA82D0 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929E92C42E85B00FA82D0 /* ToastView.swift */; };
 		27B929FA2C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929F92C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift */; };
 		27B929FD2C42F09500FA82D0 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929FC2C42F09500FA82D0 /* LoginViewModelTests.swift */; };
+		27B929FF2C42F53800FA82D0 /* AppointmentListItemModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929FE2C42F53800FA82D0 /* AppointmentListItemModelTests.swift */; };
 		27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75392C4200C6009F8146 /* FayApp.swift */; };
 		27FD753E2C4200C7009F8146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD753D2C4200C7009F8146 /* Assets.xcassets */; };
 		27FD75412C4200C7009F8146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD75402C4200C7009F8146 /* Preview Assets.xcassets */; };
@@ -80,6 +81,7 @@
 		27B929EF2C42EC4E00FA82D0 /* FayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B929F92C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewModelTests.swift; sourceTree = "<group>"; };
 		27B929FC2C42F09500FA82D0 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		27B929FE2C42F53800FA82D0 /* AppointmentListItemModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListItemModelTests.swift; sourceTree = "<group>"; };
 		27FD75362C4200C6009F8146 /* Fay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FD75392C4200C6009F8146 /* FayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FayApp.swift; sourceTree = "<group>"; };
 		27FD753D2C4200C7009F8146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				27B929F92C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift */,
+				27B929FE2C42F53800FA82D0 /* AppointmentListItemModelTests.swift */,
 			);
 			path = AppointmentTests;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B929FD2C42F09500FA82D0 /* LoginViewModelTests.swift in Sources */,
+				27B929FF2C42F53800FA82D0 /* AppointmentListItemModelTests.swift in Sources */,
 				27B929FA2C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
