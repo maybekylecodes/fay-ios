@@ -37,7 +37,7 @@ struct LoginView: View {
 
             Spacer()
 
-            VStack(spacing: 12) {
+            VStack(spacing: 16) {
                 TextField("Username",
                           text: $viewModel.username,
                           prompt: Text("Enter your Username"))
