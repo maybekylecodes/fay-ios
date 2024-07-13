@@ -26,6 +26,9 @@ class AppointmentsViewModel: ObservableObject {
     // Navigation
     @Published var userSignedOut = false
 
+    // Alert
+    @Published var showSignOutAlert = false
+
     // Combine
     private var cancelables = Set<AnyCancellable>()
 
@@ -96,6 +99,10 @@ extension AppointmentsViewModel {
 
     func refreshPulled() {
         loadAppointments()
+    }
+
+    func signOutTapped() {
+        showSignOutAlert = true
     }
 
     func signOut() {

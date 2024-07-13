@@ -28,7 +28,7 @@ struct AppointmentsView: View {
                 Spacer()
 
                 Button {
-                    viewModel.signOut()
+                    viewModel.signOutTapped()
                 } label: {
                     Image(systemName: "rectangle.portrait.and.arrow.right")
                         .foregroundStyle(.red.opacity(0.5))
@@ -84,6 +84,13 @@ struct AppointmentsView: View {
         .onAppear {
             // Hides ugly default refresh control
             UIRefreshControl.appearance().tintColor = .clear
+        }
+        .alert("Sign Out?",
+               isPresented: $viewModel.showSignOutAlert) {
+            Button("Cancel", role: .cancel) { }
+            Button("Sign Out", role: .destructive) {
+                viewModel.signOut()
+            }
         }
     }
 }
