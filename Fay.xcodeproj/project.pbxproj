@@ -24,6 +24,8 @@
 		27B929D22C4249E600FA82D0 /* AppNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D12C4249E600FA82D0 /* AppNavigationModel.swift */; };
 		27B929D42C4249F400FA82D0 /* AppDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D32C4249F400FA82D0 /* AppDestination.swift */; };
 		27B929D72C42522E00FA82D0 /* AppointmentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D62C42522E00FA82D0 /* AppointmentsViewModel.swift */; };
+		27B929D92C42DC2B00FA82D0 /* AnimatedTypingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929D82C42DC2B00FA82D0 /* AnimatedTypingView.swift */; };
+		27B929DD2C42E35200FA82D0 /* AnimatedTypingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929DC2C42E35200FA82D0 /* AnimatedTypingViewModel.swift */; };
 		27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75392C4200C6009F8146 /* FayApp.swift */; };
 		27FD753E2C4200C7009F8146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD753D2C4200C7009F8146 /* Assets.xcassets */; };
 		27FD75412C4200C7009F8146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD75402C4200C7009F8146 /* Preview Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		27B929D12C4249E600FA82D0 /* AppNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationModel.swift; sourceTree = "<group>"; };
 		27B929D32C4249F400FA82D0 /* AppDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDestination.swift; sourceTree = "<group>"; };
 		27B929D62C42522E00FA82D0 /* AppointmentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewModel.swift; sourceTree = "<group>"; };
+		27B929D82C42DC2B00FA82D0 /* AnimatedTypingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTypingView.swift; sourceTree = "<group>"; };
+		27B929DC2C42E35200FA82D0 /* AnimatedTypingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTypingViewModel.swift; sourceTree = "<group>"; };
 		27FD75362C4200C6009F8146 /* Fay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FD75392C4200C6009F8146 /* FayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FayApp.swift; sourceTree = "<group>"; };
 		27FD753D2C4200C7009F8146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 				27B929D62C42522E00FA82D0 /* AppointmentsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		27B929DB2C42E2E600FA82D0 /* AnimatedTypingView */ = {
+			isa = PBXGroup;
+			children = (
+				27B929D82C42DC2B00FA82D0 /* AnimatedTypingView.swift */,
+				27B929DC2C42E35200FA82D0 /* AnimatedTypingViewModel.swift */,
+			);
+			path = AnimatedTypingView;
 			sourceTree = "<group>";
 		};
 		27FD752D2C4200C6009F8146 = {
@@ -218,6 +231,7 @@
 			children = (
 				27B929BA2C4232D900FA82D0 /* SeparatorView.swift */,
 				27B929CE2C4246C000FA82D0 /* PulsingLogoView.swift */,
+				27B929DB2C42E2E600FA82D0 /* AnimatedTypingView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,6 +354,7 @@
 				27B929B02C422E4600FA82D0 /* NetworkConstants.swift in Sources */,
 				27B929D72C42522E00FA82D0 /* AppointmentsViewModel.swift in Sources */,
 				27B929B22C422E5800FA82D0 /* NetworkError.swift in Sources */,
+				27B929D92C42DC2B00FA82D0 /* AnimatedTypingView.swift in Sources */,
 				27B929D22C4249E600FA82D0 /* AppNavigationModel.swift in Sources */,
 				27B929D42C4249F400FA82D0 /* AppDestination.swift in Sources */,
 				27FD755D2C422258009F8146 /* LoginUserPost.swift in Sources */,
@@ -351,6 +366,7 @@
 				27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */,
 				27B929CD2C42443500FA82D0 /* Appointment.swift in Sources */,
 				27FD75572C421E40009F8146 /* NetworkClient.swift in Sources */,
+				27B929DD2C42E35200FA82D0 /* AnimatedTypingViewModel.swift in Sources */,
 				27B929BD2C42387A00FA82D0 /* StatusSelectionView.swift in Sources */,
 				27B929C62C423FBC00FA82D0 /* MonthView.swift in Sources */,
 				27FD755A2C421FC6009F8146 /* KeychainManager.swift in Sources */,

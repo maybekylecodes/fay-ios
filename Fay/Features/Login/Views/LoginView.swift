@@ -35,7 +35,8 @@ struct LoginView: View {
             }
             .padding(.top, 16)
 
-            Spacer()
+            AnimatedTypingView()
+                .padding(.vertical, 32)
 
             VStack(spacing: 16) {
                 TextField("Username",
