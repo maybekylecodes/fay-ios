@@ -37,7 +37,7 @@ extension AppointmentListItemModel {
         dateFormatter.dateFormat = "h:mm a"
         let startTime = dateFormatter.string(from: appointment.start)
         let endTime = dateFormatter.string(from: appointment.end)
-        let timeZoneAbbreviation = TimeZone.current.abbreviation() ?? ""
+        let timeZoneAbbreviation = TimeZone.current.abbreviation() ?? "PDT" // Assuming my own time zone
 
         // Format month and day
         dateFormatter.dateFormat = "MMM"

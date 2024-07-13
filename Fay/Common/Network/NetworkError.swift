@@ -14,6 +14,7 @@ enum NetworkError: Error {
 }
 
 extension NetworkError {
+    /// User understandble error messages
     var displayText: String {
         switch self {
         case .invalidResponse:

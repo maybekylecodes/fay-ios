@@ -15,6 +15,7 @@ private enum HTTPMethod: String {
     case patch = "PATCH"
 }
 
+/// Generic network class to make network calls
 class NetworkClient {
 
     static func getDecodableObject<T: Decodable>(path: String) async throws -> T {

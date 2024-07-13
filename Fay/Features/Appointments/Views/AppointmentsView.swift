@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppointmentsView: View {
 
-    @EnvironmentObject private var navModel: AppNavigationModel // For logging out
+    @EnvironmentObject private var navModel: AppNavigationModel
 
     @StateObject private var viewModel = AppointmentsViewModel()
 

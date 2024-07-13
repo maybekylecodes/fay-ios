@@ -15,6 +15,7 @@ enum KeychainError: Error {
     case deleteFailure
 }
 
+/// Used for storing sensitive information, like auth tokens
 class KeychainManager {
 
     enum KeychainIdentifier: String, CaseIterable {

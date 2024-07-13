@@ -112,11 +112,11 @@ extension LoginView {
     }
 
     var usernameBorderColor: Color {
-        return focusedField == .username ? .fayBlue : .gray
+        return focusedField == .username ? .fayBlue : .separatorGray
     }
 
     var passwordBorderColor: Color {
-        return focusedField == .password ? .fayBlue : .gray
+        return focusedField == .password ? .fayBlue : .separatorGray
     }
 }
 
