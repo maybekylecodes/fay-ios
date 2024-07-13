@@ -16,4 +16,12 @@ extension View {
         .listRowSeparator(.hidden)
         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
     }
+
+    /// Presents a toast
+    /// - Parameter model: The model of toast to present
+    /// - Returns: View
+    func toastView(model: Binding<ToastModel?>) -> some View {
+        self
+            .modifier(ToastModifier(model: model))
+    }
 }

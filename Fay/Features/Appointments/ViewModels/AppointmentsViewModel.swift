@@ -30,6 +30,9 @@ class AppointmentsViewModel: ObservableObject {
     // Alert
     @Published var showSignOutAlert = false
 
+    // Toast
+    @Published var toastModel: ToastModel?
+
     // Combine
     private var cancelables = Set<AnyCancellable>()
 
@@ -60,7 +63,11 @@ extension AppointmentsViewModel {
             } catch {
                 print(error)
                 isLoading = false
-                // TODO: - Surface Error
+                if let networkError = error as? NetworkError {
+                    toastModel = ToastModel(message: networkError.displayText)
+                } else {
+                    toastModel = ToastModel(message: "Unknown error occurred")
+                }
             }
         }
     }
@@ -112,7 +119,7 @@ extension AppointmentsViewModel {
             userSignedOut = true
         } catch {
             print(error)
-            // TODO: - Show Error
+            toastModel = ToastModel(message: "Unable to sign out, please try again")
         }
     }
 }

@@ -103,6 +103,7 @@ struct LoginView: View {
                 navModel.navigate(to: .appointments)
             }
         }
+        .toastView(model: $viewModel.toastModel)
     }
 }
 

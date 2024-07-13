@@ -33,6 +33,6 @@ class AuthProvider: AuthService {
 
 class MockAuthProvider: AuthService {
     func loginUser(user: LoginUserPost) async throws {
-        
+        throw NetworkError.badCredentials
     }
 }

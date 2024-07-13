@@ -86,6 +86,7 @@ struct AppointmentsView: View {
             // Hides ugly default refresh control
             UIRefreshControl.appearance().tintColor = .clear
         }
+        .toastView(model: $viewModel.toastModel)
         .alert("Sign Out?",
                isPresented: $viewModel.showSignOutAlert) {
             Button("Cancel", role: .cancel) { }

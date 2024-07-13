@@ -26,6 +26,9 @@ class LoginViewModel: ObservableObject {
     // Navigation
     @Published var userLoggedIn = false
 
+    // Toast
+    @Published var toastModel: ToastModel?
+
     // Combine
     private var cancellables = Set<AnyCancellable>()
 
@@ -64,7 +67,7 @@ extension LoginViewModel {
 extension LoginViewModel {
     func continueTapped() {
         guard continueButtonEnabled else {
-            // TODO: - Show Error
+            toastModel = ToastModel(message: "Please be sure you have entered a username and password")
             return
         }
         isLoggingIn = true
@@ -81,7 +84,9 @@ extension LoginViewModel {
                 print(error)
                 isLoggingIn = false
                 if let networkError = error as? NetworkError {
-                    // TODO: - Throw error here with network error display text
+                    toastModel = ToastModel(message: networkError.displayText)
+                } else {
+                    toastModel = ToastModel(message: "Unknown error occurred")
                 }
             }
         }
