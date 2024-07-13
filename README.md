@@ -56,4 +56,4 @@ We want to avoid storing sensitive information in memory as much as possible as 
 
 - Login (approx 2 hrs)
 - Appointments (approx 2hrs)
-- All other (approx 3 hours)
+- All other (approx 4 hours)
