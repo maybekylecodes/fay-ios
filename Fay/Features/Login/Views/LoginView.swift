@@ -49,6 +49,7 @@ struct LoginView: View {
                         .strokeBorder(usernameBorderColor, lineWidth: 1)
                 )
                 .focused($focusedField, equals: .username)
+                .submitLabel(.next)
                 .onSubmit {
                     focusedField = .password
                 }
