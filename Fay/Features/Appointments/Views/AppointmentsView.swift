@@ -24,12 +24,21 @@ struct AppointmentsView: View {
 
                 Text("Fay")
                     .font(.title2)
+
+                Spacer()
+
+                Button {
+                    viewModel.signOut()
+                } label: {
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .foregroundStyle(.red.opacity(0.5))
+                        .frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+                .padding(.trailing, 8)
             }
             .padding(.top, 16)
-            .padding(.horizontal, 20)
-            .onTapGesture {
-                viewModel.signOut() // So you can sign out / back in to test
-            }
+            .padding(.leading, 20)
 
             SeparatorView()
 

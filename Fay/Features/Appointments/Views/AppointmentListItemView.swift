@@ -14,7 +14,7 @@ struct AppointmentListItemView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            HStack(spacing: 12) {
+            HStack(alignment: .top, spacing: 12) {
                 MonthView(month: model.month, day: model.day)
 
                 VStack(alignment: .leading, spacing: 4) {
