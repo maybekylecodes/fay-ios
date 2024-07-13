@@ -42,7 +42,9 @@ struct LoginView: View {
             VStack(spacing: 16) {
                 TextField("Username",
                           text: $viewModel.username,
-                          prompt: Text("Enter your Username"))
+                          prompt: 
+                            Text("Enter your Username")
+                    .foregroundColor(.separatorGray))
                 .textContentType(.username)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 8)
@@ -55,10 +57,13 @@ struct LoginView: View {
                 .onSubmit {
                     focusedField = .password
                 }
+                .disabled(viewModel.isLoggingIn)
 
                 SecureField("Password",
                             text: $viewModel.password,
-                            prompt: Text("Enter your Password"))
+                            prompt: 
+                                Text("Enter your Password")
+                    .foregroundColor(.separatorGray))
                 .textContentType(.password)
                 .padding(.vertical, 12)
                 .padding(.horizontal, 8)
@@ -68,8 +73,10 @@ struct LoginView: View {
                 )
                 .focused($focusedField, equals: .password)
                 .onSubmit {
+                    focusedField = nil
                     viewModel.continueTapped()
                 }
+                .disabled(viewModel.isLoggingIn)
             }
 
             Spacer()
@@ -81,6 +88,7 @@ struct LoginView: View {
                     .padding(.bottom, 32)
             } else {
                 Button {
+                    focusedField = nil
                     viewModel.continueTapped()
                 } label: {
                     Text("Continue")
