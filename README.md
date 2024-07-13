@@ -5,9 +5,9 @@ This was incredibly fun to work on. It was really great to flex some coding musc
 ## Fun Bits
 
 I copied (stole) this idea from Fay's website. On the login screen you can see a typing animation with a list of potential helpful use cases for a nutritionist. 
-![Typing Animation](images/typing.png)
+<img src="image.png" width="300" alt="images/typing.png">
 
-The loading progress spinner is overdone, I made a custom little progress indicator using Fay's logo that grows and shrinks to show something is happening 
+The loading progress spinner is overused, I made a custom little progress indicator using Fay's logo that grows and shrinks to show something is happening 
 ![Loading Animation](images/loading.png)
 
 I added the ability to sign out which will make testing easier, and it just makes sense. 
