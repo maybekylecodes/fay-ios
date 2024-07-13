@@ -71,21 +71,28 @@ struct LoginView: View {
 
             Spacer()
 
-            Button {
-                viewModel.continueTapped()
-            } label: {
-                Text("Continue")
-                    .foregroundStyle(.white)
-                    .frame(height: 48)
+            if viewModel.isLoggingIn {
+                ProgressView()
+                    .tint(.fayBlue)
                     .frame(maxWidth: .infinity)
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(continueBackgroundColor)
-                    )
+                    .padding(.bottom, 32)
+            } else {
+                Button {
+                    viewModel.continueTapped()
+                } label: {
+                    Text("Continue")
+                        .foregroundStyle(.white)
+                        .frame(height: 48)
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .fill(continueBackgroundColor)
+                        )
+                }
+                .buttonStyle(.plain)
+                .disabled(!viewModel.continueButtonEnabled)
+                .padding(.bottom, 32)
             }
-            .buttonStyle(.plain)
-            .disabled(!viewModel.continueButtonEnabled)
-            .padding(.bottom, 32)
         }
         .padding(.horizontal, 20)
         .onReceive(viewModel.$userLoggedIn) { loggedIn in

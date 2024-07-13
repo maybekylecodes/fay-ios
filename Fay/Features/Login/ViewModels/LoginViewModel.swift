@@ -20,6 +20,7 @@ class LoginViewModel: ObservableObject {
 
     // View
     @Published var continueButtonEnabled = false
+    @Published var isLoggingIn = false
 
     // Navigation
     @Published var userLoggedIn = false
@@ -65,6 +66,7 @@ extension LoginViewModel {
             // TODO: - Show Error
             return
         }
+        isLoggingIn = true
 
         // Usernames are generally case insensitive & don't have spaces or new lines
         let trimmedUsername = username.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
@@ -76,7 +78,7 @@ extension LoginViewModel {
                 userLoggedIn = true
             } catch {
                 print(error)
-
+                isLoggingIn = false
                 if let networkError = error as? NetworkError {
                     // TODO: - Throw error here with network error display text
                 }

@@ -89,7 +89,7 @@ class KeychainManager {
         return keyValueData
     }
 
-    static private func deleteKeychainString(keyId: KeychainIdentifier) throws {
+    static func deleteKeychainString(keyId: KeychainIdentifier) throws {
 
         let deleteQuery: [String: Any] = [kSecClass as String: kSecClassGenericPassword,
                                           kSecAttrService as String: keyId.rawValue]
