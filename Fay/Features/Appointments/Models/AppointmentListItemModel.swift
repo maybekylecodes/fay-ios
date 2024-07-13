@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AppointmentListItemModel: Hashable {
+struct AppointmentListItemModel: Hashable, Identifiable {
     let id: String
     let title: String
     let timeRange: String

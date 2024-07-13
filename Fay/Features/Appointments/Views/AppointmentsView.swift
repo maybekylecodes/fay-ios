@@ -10,8 +10,13 @@ import SwiftUI
 @MainActor
 class AppointmentsViewModel: ObservableObject {
 
+    // Data
+    @Published var appointmentModels = [AppointmentListItemModel.getMock(),
+                                        AppointmentListItemModel.getMock()]
+
     // View
     @Published var selectedStatus: StatusSelection = .upcoming
+    @Published var selectedModelId: String?
 }
 
 // MARK: - User Actions
@@ -51,10 +56,18 @@ struct AppointmentsView: View {
             .padding(.top, 24)
 
             List {
-
+                ForEach(viewModel.appointmentModels) { model in
+                    AppointmentListItemView(model: model,
+                                            selectedId: $viewModel.selectedModelId)
+                    .removeSeparatorLines()
+                    .padding(.horizontal, 20)
+                    .padding(.top, 12)
+                    .onTapGesture {
+                        viewModel.selectedModelId = model.id
+                    }
+                }
             }
-
-            Spacer()
+            .listStyle(.plain)
         }
     }
 }
