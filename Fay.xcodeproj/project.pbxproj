@@ -10,6 +10,13 @@
 		27B929B02C422E4600FA82D0 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929AF2C422E4600FA82D0 /* NetworkConstants.swift */; };
 		27B929B22C422E5800FA82D0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929B12C422E5800FA82D0 /* NetworkError.swift */; };
 		27B929B52C422ED200FA82D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929B42C422ED200FA82D0 /* LoginViewModel.swift */; };
+		27B929B82C42310700FA82D0 /* AppointmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929B72C42310700FA82D0 /* AppointmentsView.swift */; };
+		27B929BB2C4232D900FA82D0 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929BA2C4232D900FA82D0 /* SeparatorView.swift */; };
+		27B929BD2C42387A00FA82D0 /* StatusSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929BC2C42387A00FA82D0 /* StatusSelectionView.swift */; };
+		27B929C02C42393A00FA82D0 /* StatusSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929BF2C42393A00FA82D0 /* StatusSelection.swift */; };
+		27B929C22C42397600FA82D0 /* AppointmentListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929C12C42397600FA82D0 /* AppointmentListItemView.swift */; };
+		27B929C42C423FA900FA82D0 /* AppointmentListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929C32C423FA900FA82D0 /* AppointmentListItemModel.swift */; };
+		27B929C62C423FBC00FA82D0 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929C52C423FBC00FA82D0 /* MonthView.swift */; };
 		27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75392C4200C6009F8146 /* FayApp.swift */; };
 		27FD753E2C4200C7009F8146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD753D2C4200C7009F8146 /* Assets.xcassets */; };
 		27FD75412C4200C7009F8146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD75402C4200C7009F8146 /* Preview Assets.xcassets */; };
@@ -24,6 +31,13 @@
 		27B929AF2C422E4600FA82D0 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		27B929B12C422E5800FA82D0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		27B929B42C422ED200FA82D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		27B929B72C42310700FA82D0 /* AppointmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsView.swift; sourceTree = "<group>"; };
+		27B929BA2C4232D900FA82D0 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		27B929BC2C42387A00FA82D0 /* StatusSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelectionView.swift; sourceTree = "<group>"; };
+		27B929BF2C42393A00FA82D0 /* StatusSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelection.swift; sourceTree = "<group>"; };
+		27B929C12C42397600FA82D0 /* AppointmentListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListItemView.swift; sourceTree = "<group>"; };
+		27B929C32C423FA900FA82D0 /* AppointmentListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListItemModel.swift; sourceTree = "<group>"; };
+		27B929C52C423FBC00FA82D0 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		27FD75362C4200C6009F8146 /* Fay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FD75392C4200C6009F8146 /* FayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FayApp.swift; sourceTree = "<group>"; };
 		27FD753D2C4200C7009F8146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +66,26 @@
 				27B929B42C422ED200FA82D0 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		27B929B62C4230FB00FA82D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27B929B72C42310700FA82D0 /* AppointmentsView.swift */,
+				27B929BC2C42387A00FA82D0 /* StatusSelectionView.swift */,
+				27B929C12C42397600FA82D0 /* AppointmentListItemView.swift */,
+				27B929C52C423FBC00FA82D0 /* MonthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27B929BE2C42393200FA82D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27B929BF2C42393A00FA82D0 /* StatusSelection.swift */,
+				27B929C32C423FA900FA82D0 /* AppointmentListItemModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		27FD752D2C4200C6009F8146 = {
@@ -111,6 +145,8 @@
 		27FD75492C420175009F8146 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
+				27B929BE2C42393200FA82D0 /* Models */,
+				27B929B62C4230FB00FA82D0 /* Views */,
 			);
 			path = Appointments;
 			sourceTree = "<group>";
@@ -138,6 +174,7 @@
 		27FD754E2C42139E009F8146 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				27B929BA2C4232D900FA82D0 /* SeparatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,15 +291,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B929BB2C4232D900FA82D0 /* SeparatorView.swift in Sources */,
 				27B929B02C422E4600FA82D0 /* NetworkConstants.swift in Sources */,
 				27B929B22C422E5800FA82D0 /* NetworkError.swift in Sources */,
 				27FD755D2C422258009F8146 /* LoginUserPost.swift in Sources */,
 				27FD75542C421DEA009F8146 /* AuthService.swift in Sources */,
+				27B929B82C42310700FA82D0 /* AppointmentsView.swift in Sources */,
 				27FD754C2C420FFC009F8146 /* LoginView.swift in Sources */,
+				27B929C22C42397600FA82D0 /* AppointmentListItemView.swift in Sources */,
 				27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */,
 				27FD75572C421E40009F8146 /* NetworkClient.swift in Sources */,
+				27B929BD2C42387A00FA82D0 /* StatusSelectionView.swift in Sources */,
+				27B929C62C423FBC00FA82D0 /* MonthView.swift in Sources */,
 				27FD755A2C421FC6009F8146 /* KeychainManager.swift in Sources */,
 				27B929B52C422ED200FA82D0 /* LoginViewModel.swift in Sources */,
+				27B929C42C423FA900FA82D0 /* AppointmentListItemModel.swift in Sources */,
+				27B929C02C42393A00FA82D0 /* StatusSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

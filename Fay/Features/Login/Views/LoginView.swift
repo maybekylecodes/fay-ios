@@ -76,13 +76,12 @@ struct LoginView: View {
                     .foregroundStyle(.white)
                     .frame(height: 48)
                     .frame(maxWidth: .infinity)
-                    .contentShape(Rectangle())
+                    .background(
+                        RoundedRectangle(cornerRadius: 8)
+                            .fill(continueBackgroundColor)
+                    )
             }
             .buttonStyle(.plain)
-            .background(
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(continueBackgroundColor)
-            )
             .disabled(!viewModel.continueButtonEnabled)
             .padding(.bottom, 32)
         }
