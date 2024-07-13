@@ -50,7 +50,6 @@ struct AppointmentsView: View {
                 .padding(.top, 24)
             
             StatusSelectionView(selected: $viewModel.selectedStatus)
-
             .padding(.top, 24)
 
             if viewModel.isLoading {

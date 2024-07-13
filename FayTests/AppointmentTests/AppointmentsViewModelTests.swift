@@ -14,8 +14,8 @@ import Combine
 @MainActor
 final class AppointmentsViewModelTests: XCTestCase {
 
+    private var viewModel: AppointmentsViewModel!
     private var cancelables = Set<AnyCancellable>()
-    var viewModel: AppointmentsViewModel!
 
     override func setUpWithError() throws {
         Container.shared.appointmentService.register { MockAppointmentProvider() }

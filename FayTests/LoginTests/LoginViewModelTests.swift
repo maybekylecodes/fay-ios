@@ -13,7 +13,7 @@ import Combine
 @MainActor
 final class LoginViewModelTests: XCTestCase {
 
-    var viewModel: LoginViewModel!
+    private var viewModel: LoginViewModel!
     private var cancelables = Set<AnyCancellable>()
 
     override func setUpWithError() throws {
