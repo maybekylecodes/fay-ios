@@ -6,98 +6,6 @@
 //
 
 import SwiftUI
-import Combine
-
-@MainActor
-class AppointmentsViewModel: ObservableObject {
-
-    // Services
-    let apptService: AppointmentService = AppointmentProvider()
-
-    // Data
-    @Published private var appointments = [Appointment]()
-    @Published var appointmentModels = [AppointmentListItemModel]()
-
-    // View
-    @Published var selectedStatus: StatusSelection = .upcoming
-    @Published var selectedModelId: String?
-
-    // Navigation
-    @Published var userSignedOut = false
-
-    // Combine
-    private var cancelables = Set<AnyCancellable>()
-
-    init() {
-        setup()
-    }
-
-    private func setup() {
-        setupSubscribers()
-        loadData()
-    }
-}
-
-// MARK: - Data Loading
-extension AppointmentsViewModel {
-
-    private func loadData() {
-        loadAppointments()
-    }
-
-    private func loadAppointments() {
-        Task {
-            do {
-                let response = try await apptService.getAppts()
-                appointments = response.appointments
-            } catch {
-                print(error)
-            }
-        }
-    }
-}
-
-// MARK: - Subscriber Setup
-extension AppointmentsViewModel {
-    private func setupSubscribers() {
-        setupAppointmentAndStatusSubscribers()
-    }
-
-    private func setupAppointmentAndStatusSubscribers() {
-        Publishers.CombineLatest($appointments, $selectedStatus)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] appts, status in
-                self?.updateAppointmentModels(appts: appts, status: status)
-            }.store(in: &cancelables)
-    }
-}
-
-// MARK: - Utility Functions
-extension AppointmentsViewModel {
-    func updateAppointmentModels(appts: [Appointment], status: StatusSelection) {
-        var update = [Appointment]()
-        switch status {
-        case .upcoming:
-            update = appts.filter { $0.status == .scheduled }
-        case .past:
-            update = appts.filter { $0.status == .occurred }
-        }
-        appointmentModels = update.compactMap { AppointmentListItemModel(appointment: $0) }
-    }
-}
-
-// MARK: - User Actions
-extension AppointmentsViewModel {
-    func signOut() {
-        do {
-            try KeychainManager.deleteKeychainString(keyId: .authToken)
-            userSignedOut = true
-        } catch {
-            print(error)
-            // TODO: - Show Error
-        }
-    }
-}
 
 struct AppointmentsView: View {
 
@@ -135,6 +43,13 @@ struct AppointmentsView: View {
 
             .padding(.top, 24)
 
+            if viewModel.isLoading {
+                ProgressView()
+                    .tint(.fayBlue)
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 16)
+            }
+            
             List {
                 ForEach(viewModel.appointmentModels) { model in
                     AppointmentListItemView(model: model,
@@ -148,11 +63,18 @@ struct AppointmentsView: View {
                 }
             }
             .listStyle(.plain)
+            .refreshable {
+                viewModel.refreshPulled()
+            }
         }
         .onReceive(viewModel.$userSignedOut) { signedOut in
             if signedOut {
                 navModel.navigate(to: .login)
             }
+        }
+        .onAppear {
+            // Hides ugly default refresh control
+            UIRefreshControl.appearance().tintColor = .clear
         }
     }
 }
