@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27B929B02C422E4600FA82D0 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929AF2C422E4600FA82D0 /* NetworkConstants.swift */; };
+		27B929B22C422E5800FA82D0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929B12C422E5800FA82D0 /* NetworkError.swift */; };
+		27B929B52C422ED200FA82D0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929B42C422ED200FA82D0 /* LoginViewModel.swift */; };
 		27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75392C4200C6009F8146 /* FayApp.swift */; };
-		27FD753C2C4200C6009F8146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD753B2C4200C6009F8146 /* ContentView.swift */; };
 		27FD753E2C4200C7009F8146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD753D2C4200C7009F8146 /* Assets.xcassets */; };
 		27FD75412C4200C7009F8146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD75402C4200C7009F8146 /* Preview Assets.xcassets */; };
+		27FD754C2C420FFC009F8146 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD754B2C420FFC009F8146 /* LoginView.swift */; };
+		27FD75542C421DEA009F8146 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75532C421DEA009F8146 /* AuthService.swift */; };
+		27FD75572C421E40009F8146 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75562C421E40009F8146 /* NetworkClient.swift */; };
+		27FD755A2C421FC6009F8146 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75592C421FC6009F8146 /* KeychainManager.swift */; };
+		27FD755D2C422258009F8146 /* LoginUserPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD755C2C422258009F8146 /* LoginUserPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27B929AF2C422E4600FA82D0 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		27B929B12C422E5800FA82D0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		27B929B42C422ED200FA82D0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		27FD75362C4200C6009F8146 /* Fay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FD75392C4200C6009F8146 /* FayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FayApp.swift; sourceTree = "<group>"; };
-		27FD753B2C4200C6009F8146 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27FD753D2C4200C7009F8146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27FD75402C4200C7009F8146 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27FD754B2C420FFC009F8146 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		27FD75532C421DEA009F8146 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		27FD75562C421E40009F8146 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		27FD75592C421FC6009F8146 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		27FD755C2C422258009F8146 /* LoginUserPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B929B32C422EC700FA82D0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				27B929B42C422ED200FA82D0 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		27FD752D2C4200C6009F8146 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +73,9 @@
 		27FD75382C4200C6009F8146 /* Fay */ = {
 			isa = PBXGroup;
 			children = (
+				27FD754D2C42134F009F8146 /* Common */,
 				27FD75472C4200D8009F8146 /* Features */,
 				27FD75392C4200C6009F8146 /* FayApp.swift */,
-				27FD753B2C4200C6009F8146 /* ContentView.swift */,
 				27FD753D2C4200C7009F8146 /* Assets.xcassets */,
 				27FD753F2C4200C7009F8146 /* Preview Content */,
 			);
@@ -71,6 +93,7 @@
 		27FD75472C4200D8009F8146 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				27FD75492C420175009F8146 /* Appointments */,
 				27FD75482C4200DD009F8146 /* Login */,
 			);
 			path = Features;
@@ -79,8 +102,86 @@
 		27FD75482C4200DD009F8146 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				27B929B32C422EC700FA82D0 /* ViewModels */,
+				27FD754A2C420FF0009F8146 /* Views */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		27FD75492C420175009F8146 /* Appointments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Appointments;
+			sourceTree = "<group>";
+		};
+		27FD754A2C420FF0009F8146 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27FD754B2C420FFC009F8146 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27FD754D2C42134F009F8146 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				27FD755B2C422247009F8146 /* Models */,
+				27FD75582C421FA9009F8146 /* KeychainManager */,
+				27FD75552C421E30009F8146 /* Network */,
+				27FD75512C421DD7009F8146 /* Services */,
+				27FD754E2C42139E009F8146 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		27FD754E2C42139E009F8146 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27FD75512C421DD7009F8146 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27FD75522C421DDF009F8146 /* AuthService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		27FD75522C421DDF009F8146 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				27FD75532C421DEA009F8146 /* AuthService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		27FD75552C421E30009F8146 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				27FD75562C421E40009F8146 /* NetworkClient.swift */,
+				27B929AF2C422E4600FA82D0 /* NetworkConstants.swift */,
+				27B929B12C422E5800FA82D0 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		27FD75582C421FA9009F8146 /* KeychainManager */ = {
+			isa = PBXGroup;
+			children = (
+				27FD75592C421FC6009F8146 /* KeychainManager.swift */,
+			);
+			path = KeychainManager;
+			sourceTree = "<group>";
+		};
+		27FD755B2C422247009F8146 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27FD755C2C422258009F8146 /* LoginUserPost.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +254,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27FD753C2C4200C6009F8146 /* ContentView.swift in Sources */,
+				27B929B02C422E4600FA82D0 /* NetworkConstants.swift in Sources */,
+				27B929B22C422E5800FA82D0 /* NetworkError.swift in Sources */,
+				27FD755D2C422258009F8146 /* LoginUserPost.swift in Sources */,
+				27FD75542C421DEA009F8146 /* AuthService.swift in Sources */,
+				27FD754C2C420FFC009F8146 /* LoginView.swift in Sources */,
 				27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */,
+				27FD75572C421E40009F8146 /* NetworkClient.swift in Sources */,
+				27FD755A2C421FC6009F8146 /* KeychainManager.swift in Sources */,
+				27B929B52C422ED200FA82D0 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +404,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +434,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
