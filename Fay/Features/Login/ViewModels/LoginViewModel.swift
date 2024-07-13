@@ -7,12 +7,13 @@
 
 import Foundation
 import Combine
+import Factory
 
 @MainActor
 class LoginViewModel: ObservableObject {
 
     // Services
-    let authService: AuthService = AuthProvider()
+    @Injected(\.authService) private var authService
 
     // User Entered Data
     @Published var username = String()

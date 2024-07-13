@@ -30,3 +30,9 @@ class AuthProvider: AuthService {
         print("Successful Login")
     }
 }
+
+class MockAuthProvider: AuthService {
+    func loginUser(user: LoginUserPost) async throws {
+        
+    }
+}

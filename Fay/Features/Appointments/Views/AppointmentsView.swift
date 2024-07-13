@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Factory
 
 struct AppointmentsView: View {
 
@@ -96,5 +97,6 @@ struct AppointmentsView: View {
 }
 
 #Preview {
-    AppointmentsView()
+    let _ = Container.shared.appointmentService.register { MockAppointmentProvider() }
+    return AppointmentsView()
 }

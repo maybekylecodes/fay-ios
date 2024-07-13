@@ -7,12 +7,13 @@
 
 import Foundation
 import Combine
+import Factory
 
 @MainActor
 class AppointmentsViewModel: ObservableObject {
 
     // Services
-    let apptService: AppointmentService = AppointmentProvider()
+    @Injected(\.appointmentService) private var appointmentService
 
     // Data
     @Published private var appointments = [Appointment]()
@@ -53,7 +54,7 @@ extension AppointmentsViewModel {
         isLoading = true
         Task {
             do {
-                let response = try await apptService.getAppts()
+                let response = try await appointmentService.getAppointments()
                 appointments = response.appointments
                 isLoading = false
             } catch {

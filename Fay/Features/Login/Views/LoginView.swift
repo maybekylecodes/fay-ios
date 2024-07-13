@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Factory
 
 struct LoginView: View {
 
@@ -122,5 +123,6 @@ extension LoginView {
 }
 
 #Preview {
-    LoginView()
+    let _ = Container.shared.authService.register { MockAuthProvider() }
+    return LoginView()
 }
