@@ -18,11 +18,3 @@ class AppointmentProvider: AppointmentService {
         return response
     }
 }
-
-class MockAppointmentProvider: AppointmentService {
-    func getAppointments() async throws -> AppointmentResponse {
-        return AppointmentResponse(appointments: [Appointment.getMock(),
-                                                  Appointment.getMock(),
-                                                  Appointment.getMock()])
-    }
-}

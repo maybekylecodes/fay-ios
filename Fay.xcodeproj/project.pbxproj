@@ -34,6 +34,8 @@
 		27B929FA2C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929F92C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift */; };
 		27B929FD2C42F09500FA82D0 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929FC2C42F09500FA82D0 /* LoginViewModelTests.swift */; };
 		27B929FF2C42F53800FA82D0 /* AppointmentListItemModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B929FE2C42F53800FA82D0 /* AppointmentListItemModelTests.swift */; };
+		27F4B2D02C4A9BD700952CCA /* MockAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B2CF2C4A9BD700952CCA /* MockAuthProvider.swift */; };
+		27F4B2D32C4A9CEC00952CCA /* MockAppointmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F4B2D22C4A9CEC00952CCA /* MockAppointmentProvider.swift */; };
 		27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD75392C4200C6009F8146 /* FayApp.swift */; };
 		27FD753E2C4200C7009F8146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD753D2C4200C7009F8146 /* Assets.xcassets */; };
 		27FD75412C4200C7009F8146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FD75402C4200C7009F8146 /* Preview Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		27B929F92C42EC7C00FA82D0 /* AppointmentsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsViewModelTests.swift; sourceTree = "<group>"; };
 		27B929FC2C42F09500FA82D0 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		27B929FE2C42F53800FA82D0 /* AppointmentListItemModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentListItemModelTests.swift; sourceTree = "<group>"; };
+		27F4B2CF2C4A9BD700952CCA /* MockAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthProvider.swift; sourceTree = "<group>"; };
+		27F4B2D22C4A9CEC00952CCA /* MockAppointmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppointmentProvider.swift; sourceTree = "<group>"; };
 		27FD75362C4200C6009F8146 /* Fay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FD75392C4200C6009F8146 /* FayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FayApp.swift; sourceTree = "<group>"; };
 		27FD753D2C4200C7009F8146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,6 +221,31 @@
 			path = LoginTests;
 			sourceTree = "<group>";
 		};
+		27F4B2CD2C4A9BB300952CCA /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				27F4B2D12C4A9CDE00952CCA /* MockAppointmentService */,
+				27F4B2CE2C4A9BBD00952CCA /* MockAuthService */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		27F4B2CE2C4A9BBD00952CCA /* MockAuthService */ = {
+			isa = PBXGroup;
+			children = (
+				27F4B2CF2C4A9BD700952CCA /* MockAuthProvider.swift */,
+			);
+			path = MockAuthService;
+			sourceTree = "<group>";
+		};
+		27F4B2D12C4A9CDE00952CCA /* MockAppointmentService */ = {
+			isa = PBXGroup;
+			children = (
+				27F4B2D22C4A9CEC00952CCA /* MockAppointmentProvider.swift */,
+			);
+			path = MockAppointmentService;
+			sourceTree = "<group>";
+		};
 		27FD752D2C4200C6009F8146 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +279,7 @@
 		27FD753F2C4200C7009F8146 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				27F4B2CD2C4A9BB300952CCA /* Mocks */,
 				27FD75402C4200C7009F8146 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -478,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F4B2D02C4A9BD700952CCA /* MockAuthProvider.swift in Sources */,
 				27B929E82C42E83B00FA82D0 /* ToastModifier.swift in Sources */,
 				27B929E62C42E82800FA82D0 /* ToastModel.swift in Sources */,
 				27B929BB2C4232D900FA82D0 /* SeparatorView.swift in Sources */,
@@ -495,6 +526,7 @@
 				27B929C22C42397600FA82D0 /* AppointmentListItemView.swift in Sources */,
 				27FD753A2C4200C6009F8146 /* FayApp.swift in Sources */,
 				27B929CD2C42443500FA82D0 /* Appointment.swift in Sources */,
+				27F4B2D32C4A9CEC00952CCA /* MockAppointmentProvider.swift in Sources */,
 				27B929E32C42E62600FA82D0 /* Container+Extensions.swift in Sources */,
 				27FD75572C421E40009F8146 /* NetworkClient.swift in Sources */,
 				27B929DD2C42E35200FA82D0 /* AnimatedTypingViewModel.swift in Sources */,
