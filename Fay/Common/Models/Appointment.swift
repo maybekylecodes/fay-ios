@@ -19,21 +19,6 @@ struct Appointment: Decodable {
     let recurrenceType: AppointmentRecurrenceType
 }
 
-extension Appointment {
-    static func getMock() -> Appointment {
-        return Appointment(
-            appointmentId: UUID().uuidString, 
-            patientId: "1",
-            providerId: "100",
-            status: .scheduled,
-            appointmentType: .followUp,
-            start: Date().addingTimeInterval(1000),
-            end: Date().addingTimeInterval(2000),
-            durationInMinutes: 10,
-            recurrenceType: .weekly)
-    }
-}
-
 enum AppointmentStatus: String, Hashable, Decodable {
     case scheduled = "Scheduled"
     case occurred = "Occurred"

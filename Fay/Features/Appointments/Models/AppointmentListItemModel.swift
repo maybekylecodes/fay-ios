@@ -17,18 +17,6 @@ struct AppointmentListItemModel: Hashable, Identifiable {
 }
 
 extension AppointmentListItemModel {
-    static func getMock() -> AppointmentListItemModel {
-        return AppointmentListItemModel(
-            id: UUID().uuidString,
-            title: "Follow up with Taylor Palmer, RD",
-            timeRange: "11:00 AM - 12:00 PM (PT)",
-            recurrence: "Weekly",
-            month: "NOV",
-            day: "12")
-    }
-}
-
-extension AppointmentListItemModel {
     init(appointment: Appointment) {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
