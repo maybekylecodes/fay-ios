@@ -53,12 +53,12 @@ struct AppointmentsView: View {
             .padding(.top, 24)
 
             if viewModel.isLoading {
-                SpinningLogoView()
+                PulsingLogoView()
                     .frame(width: 32, height: 32)
                     .frame(maxWidth: .infinity)
                     .padding(.top, 16)
             }
-            
+
             List {
                 ForEach(viewModel.appointmentModels) { model in
                     AppointmentListItemView(model: model,

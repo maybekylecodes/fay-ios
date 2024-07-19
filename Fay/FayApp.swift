@@ -15,7 +15,7 @@ struct FayApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $navModel.destinations) {
-                SpinningLogoView()
+                PulsingLogoView()
                     .frame(width: 80, height: 80)
                     .environmentObject(navModel)
                     .navigationDestination(for: AppDestination.self) { destination in
